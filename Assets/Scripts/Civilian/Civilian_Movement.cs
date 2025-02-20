@@ -9,7 +9,7 @@ public class Civilian_Movement : MonoBehaviour
 
     void Start()
     {
-        speed = Random.Range(4f, 8f);
+        speed = Random.Range(1f, 4f);
         StartCoroutine(Movement_Stops_Routine());
     }
 
@@ -26,7 +26,7 @@ public class Civilian_Movement : MonoBehaviour
         {
             // 50% chance to stop for 3 seconds, checked every 3 seconds
             yield return new WaitForSeconds(check_movement_interval);
-            if (Random.Range(0f, 1f) < 0.5f) 
+            if (Random.Range(0f, 1f) < 0.5f)
             {
                 isMoving = false;
                 yield return new WaitForSeconds(3f);
